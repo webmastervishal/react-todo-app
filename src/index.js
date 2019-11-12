@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
+import './style.css';
 
 import Login from './Login/LoginContainer';
+import Dashboard from './Dashboard';
 
-ReactDOM.render(<Login />, document.getElementById('root'));
+ReactDOM.render(<Dashboard />, document.getElementById('root'));
 

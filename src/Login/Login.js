@@ -3,7 +3,7 @@ import { Row, Col, Card, Form, Input, Button } from 'antd';
 
 const Login = (props) => {
     return (
-        <Row>
+        <Row className="login">
             <Col span={9}></Col>
             <Col span={6}>
                 <Card>
