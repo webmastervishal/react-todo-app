@@ -22,3 +22,36 @@
     font-size: 16px;
     margin: 8px;
 }
+
+.footer {
+        background-color: #ececec;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.content {
+    height: 700px;
+}
+
+.todo {
+        background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.todolist {
+        margin-top: 100px;
+}
+
+.todo p {
+    display: inline-block;
+    width: 95%;
+    margin-bottom: 0;
+}

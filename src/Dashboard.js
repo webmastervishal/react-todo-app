@@ -1,9 +1,10 @@
 import React from 'react';
 import Layout from './Layout';
+import Todos from './Todos/Todos';
 
 const Dashboard = () => {
     return <Layout>
-        <h1>Dashboard</h1>
+        <Todos />
     </Layout>
 }
 
