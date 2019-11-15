@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './style.css';
 
-import Login from './Login/LoginContainer';
-import Dashboard from './Dashboard';
+import AppRouter from './router/AppRouter';
 
-ReactDOM.render(<Dashboard />, document.getElementById('root'));
+ReactDOM.render(<AppRouter />, document.getElementById('root'));
 
