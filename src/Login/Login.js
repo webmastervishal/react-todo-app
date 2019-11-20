@@ -7,8 +7,8 @@ const Login = (props) => {
             <Col span={9}></Col>
             <Col span={6}>
                 <Card>
-                    <h1>Login Form</h1>
-                    <Form>
+                    <h1>Login</h1>
+                    <Form onSubmit={props.handleLogin}>
                         <Form.Item>
                             <Input
                                 type="text"
@@ -28,7 +28,7 @@ const Login = (props) => {
                         </Form.Item>
 
                         <Form.Item>
-                            <Button type="primary">
+                            <Button type="primary" htmlType="submit">
                                 Login
                             </Button>
                         </Form.Item>
