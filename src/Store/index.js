@@ -5,9 +5,11 @@ import createSagaMiddleware from 'redux-saga';
 
 import Sagas from './Sagas';
 import userReducer from './../Login/Reducer';
+import todoReducer from './../Todos/Reducer';
 
 const rootReducer = combineReducers({
-    user: userReducer
+    user: userReducer,
+    todos: todoReducer
 });
 
 const persistConfig = {

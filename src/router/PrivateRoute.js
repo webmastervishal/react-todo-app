@@ -3,7 +3,6 @@ import {Route, Redirect} from 'react-router-dom';
 import Cookies from 'js-cookie';
 
 const PrivateRoute = (props) => {
-    console.log('props',props);
     const {component:Component, ...rest} = props;
     const isAuthenticated = !!Cookies.get('token');
 

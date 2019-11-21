@@ -3,13 +3,16 @@ import actions from './Action';
 const initialState = [];
 
 const Reducer = (state = initialState, action) => {
+    const todos = JSON.parse(JSON.stringify(state));
     switch(action.type) {
         case actions.STORE_TODO:
-            return state;
+            todos.push(action.payload);
+            return todos;
         case actions.STORE_TODOS:
-            return state;
+            return action.payload;
         case actions.UPDATE_TODO:
-            return state;
+            todos.find(todo => todo.id === action.payload).completed = true;
+            return todos;
         default:
             return state;
     }

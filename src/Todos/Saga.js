@@ -1,16 +1,38 @@
-import {takeEvery} from 'redux-saga/effects';
+import {takeEvery, call, put} from 'redux-saga/effects';
+import axios from 'axios';
+import {message} from 'antd';
+import actions from './Action';
 
 //worker saga
 function* fetchTodos(action) {
-    console.log('fetch todos');
+    const {payload} = action;
+
+    const result = yield call(axios.get,`https://jsonplaceholder.typicode.com/todos?userId=${payload}`);
+    yield put(actions.storeTodos(result.data));
 }
 
 function* addTodo(action) {
-    console.log('add todo');
+    const {id, title} = action.payload;
+
+    const result = yield call(axios.post,`https://jsonplaceholder.typicode.com/todos`,{
+        userId: id,
+        title,
+        completed: false
+    });
+
+    yield put(actions.storeTodo(result.data));
 }
 
 function* markCompleted(action) {
-    console.log('mark completed');
+    const {payload} = action;
+
+    const result = yield call(axios.patch,`https://jsonplaceholder.typicode.com/todos/${payload}`, {
+        completed: true
+    });
+
+    message.info('Todo marked as completed');
+
+    yield put(actions.updateTodo(payload));
 }
 
 
